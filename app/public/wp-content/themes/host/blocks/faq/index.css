@@ -1,0 +1,8 @@
+.trigger.open .trigger-content {
+ display: block !important;
+}
+
+.trigger.open .trigger-arrrow {
+ transform-origin: center;
+ transform: rotate(180deg);
+}

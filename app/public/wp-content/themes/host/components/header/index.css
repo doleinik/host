@@ -1,0 +1,14 @@
+@tailwind components;
+
+@layer components {
+ .header-menu .menu {
+  @apply flex
+  resp-[gap/70/20]
+  text-white;
+ }
+ .header-menu .menu .menu-item a {
+  @apply uppercase
+  resp-[font/16] 
+  font-arial-regular;
+ }
+}

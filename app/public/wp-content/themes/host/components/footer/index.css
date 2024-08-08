@@ -1,0 +1,9 @@
+@tailwind components;
+
+@layer components {
+ .footer-menu .menu {
+  @apply !flex
+        resp-[gap/70/10]
+        text-white;
+ }
+}

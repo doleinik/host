@@ -1,0 +1,236 @@
+@import url("../../../../../plugins/brainwave/assembly/node_modules/swiper/swiper-bundle.css");
+@import url("./fonts.css");
+
+@tailwind components;
+
+@layer components {
+ body {
+  @apply bg-black;
+ }
+
+ .container {
+  @apply w-full
+        resp-[w-max/1300]
+        mx-auto
+        resp-[px/30/30/15];
+ }
+
+ /*Topography*/
+ .title-1 {
+  @apply resp-[font/62]
+   text-black
+   resp-[line-height/74/62]
+   font-ui-semibold;
+ }
+
+ .title-2 {
+  @apply resp-[font/56/34]
+  text-white
+     resp-[line-height/64/56]
+     uppercase
+     font-arial-regular
+     text-gradient;
+ }
+
+ .title-3 {
+  @apply text-white
+      resp-[font/43/25]
+     font-arial-regular;
+ }
+
+ .title-4 {
+  @apply resp-[font/24/18] 
+  font-arial-regular
+  text-white;
+ }
+
+ .subtitle-1 {
+  @apply resp-[font/14] 
+  resp-[line-height/21/14]
+  text-text
+  resp-[mb/6]
+  font-arial-regular;
+ }
+
+ .heading-1 {
+ }
+
+ .text-1 {
+  @apply resp-[font/24/16] 
+  resp-[line-height/32/24]
+  text-white
+  font-arial-regular;
+ }
+
+ .btn {
+  @apply block
+  resp-[font/15]
+  resp-[px/38]
+  resp-[py/12]
+  rounded-full
+  text-white
+  w-fit
+  font-arial-regular
+  gradient-border-mask;
+ }
+
+ header {
+  @apply flex-header
+        z-50
+        overflow-hidden;
+ }
+
+ main {
+  @apply flex-main
+        overflow-hidden;
+ }
+
+ footer {
+  @apply flex-footer;
+ }
+
+ .scrollbar-hide::-webkit-scrollbar {
+  @apply w-0;
+ }
+
+ .flex-center {
+  @apply flex
+        justify-center
+        items-center;
+ }
+
+ .position-center {
+  @apply absolute
+        left-[50%]
+        top-[50%]
+        translate-x-[-50%]
+        translate-y-[-50%];
+ }
+
+ .checkbox-wrap {
+  @apply w-fit
+        cursor-pointer;
+ }
+
+ .checkbox-wrap label {
+  @apply block 
+        rounded-full
+         text-white 
+         resp-[py/12/10]
+         w-fit 
+         whitespace-nowrap
+         !resp-[px/38/15]  
+         cursor-pointer
+         border-[1px]
+         border-gray 
+         resp-[font/15]
+         font-mont-regular;
+ }
+
+ .checkbox-wrap input {
+  @apply hidden;
+ }
+
+ .checkbox-wrap input:checked + label {
+  @apply bg-white 
+        text-black;
+ }
+
+ .checkbox-wrap input {
+  @apply hidden;
+ }
+ .bg-overlay-black {
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.94);
+ }
+}
+
+img {
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ object-position: center;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+.text-line-overflow-2 {
+ -webkit-line-clamp: 2;
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+}
+
+.text-line-overflow-3 {
+ -webkit-line-clamp: 3;
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+}
+
+.text-gradient {
+ width: fit-content;
+ background: #ffffff;
+ background: linear-gradient(to right, #ffffff 0%, #f07fd0 59%, #8054ee 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+ width: fit-content;
+ background: #ffffff;
+ background: linear-gradient(to right, #f07fd0 0%, #8054ee 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.gradient-border-mask {
+ position: relative;
+}
+
+.gradient-border-mask::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ border-radius: 24px;
+ border: 1px solid transparent;
+ background: linear-gradient(to right, #f07fd0 0%, #8054ee 100%) border-box;
+ -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+ -webkit-mask-composite: destination-out;
+ mask-composite: exclude;
+}
+
+.gradient-border-hover {
+ position: relative;
+}
+
+.gradient-border-hover::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ border-radius: 24px;
+ border: 1px solid #fff;
+}
+
+.gradient-border-hover:hover::before {
+ background: linear-gradient(to right, #f07fd0 0%, #8054ee 100%) border-box;
+ -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+ -webkit-mask-composite: destination-out;
+ mask-composite: exclude;
+ border: 1px solid transparent;
+}
+
+.gradient-border-hover:hover .title-gradient-hover {
+ width: fit-content;
+ background: #ffffff;
+ background: linear-gradient(to right, #ffffff 0%, #f07fd0 59%, #8054ee 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
